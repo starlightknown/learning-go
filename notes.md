@@ -50,38 +50,37 @@ int is the default type for intergers in Go, even lenghts
   
   # Strings
   
-  strings in go are all unicode
-  rune is go equivilent. of a charecter - 32bit
-  utf-8 encoding unicode charecters
-  byte - unit8
-  ascii charecters fit into range 0-127
-  len of string is the len of byte string to encode the string in utf8
-  to deal with memory, bytes of the string
-  string descriptor describes something, has pointer within and has memory location
-  s := "hello world"
-end of string is null bite
-s += "es" makes a new memory and adds es to the s as strings are immutatble
-s = strings.ToUpper(s)
+  - strings in go are all unicode
+  - rune is go equivilent for a character - 32bit
+  - utf-8 encoding unicode characters
+  - byte - uint8
+  - ascii charecters fit into range 0-127
+  - len of string is the len of byte string to encode the string in utf8
+  - to deal with memory, len gives you bytes of the string and not characters
+  - string descriptor describes something, has pointer within and has memory location
+  `s := "hello world"`
+  end of string is null bite
+`s += "es"` makes a new memory and adds es to the s as strings are immutatble.
+`s = strings.ToUpper(s)`
 
 # Arrays, Slices and maps
 
 ## Arrays
-arrays are fixed size
-gets copied
-elements gets copied, there's no descriptor
-comparable
-if sizes are not same, one can't be assigned to other as they are different types.
+- arrays are fixed size
+- elements gets copied, there's no descriptor
+- comparable (==)
+- if sizes are not same, one can't be assigned to other as they are different types.
 
 # Slice
 
-slice is like array but more string like - has a descriptor
-slices can be changed - has variable lenghth and capacity
-append takes a slice and element and adds element to the slice
-modify the slice descriptor and adds more space if used already
-not comparable
-can't be used as map key
-has append and copy
-e := a if we change e , a will change too
-slces are indexed like [8:11]
+- slice is like array but more string like - has a descriptor
+- slices can be changed - has variable lenghth and capacity
+- append takes a slice and element and adds element to the slice
+- if we modify the slice descriptor, it adds more space if used already depending on the slice of the string
+- not comparable
+- can't be used as map key
+- has append and copy
+- `e := a `if we change e , a will change too
+- slces are indexed like [8:11]
 8 is included 11 is not
 
