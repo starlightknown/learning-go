@@ -63,20 +63,23 @@ end of string is null bite
 s += "es" makes a new memory and adds es to the s as strings are immutatble
 s = strings.ToUpper(s)
 
-# Arryas, Slices and maps
+# Arrays, Slices and maps
 
+## Arrays
 arrays are fixed size
 gets copied
 elements gets copied, there's no descriptor
 comparable
-if sizes are not same, once cant be assigned to other
+if sizes are not same, one can't be assigned to other as they are different types.
 
-slice is like array but string like - has a descriptor
+# Slice
+
+slice is like array but more string like - has a descriptor
 slices can be changed - has variable lenghth and capacity
-append takes a sclice and element and adds element to the slice
+append takes a slice and element and adds element to the slice
 modify the slice descriptor and adds more space if used already
 not comparable
-cant be used as map key
+can't be used as map key
 has append and copy
 e := a if we change e , a will change too
 slces are indexed like [8:11]
